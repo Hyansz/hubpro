@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import 'animate.css';
 
 export default function Home() {
   const [showData, setShowData] = useState([]);
@@ -63,7 +64,7 @@ export default function Home() {
   
 
   return (
-    <div className="w-11/12 m-auto my-10 p-4 rounded-lg border-2 border-black shadow-2xl shadow-slate-700">
+    <div className="w-11/12 m-auto my-10 p-4 rounded-lg border-2 border-black shadow-2xl shadow-slate-700 animate__animated animate__fadeIn">
       <div className="flex items-center justify-between">
         <h1 className="p-3 font-bold text-xl">HubPro</h1>
         <h1 className="p-3 font-serif">Versi 0.0.1</h1>
@@ -97,7 +98,7 @@ export default function Home() {
           {showData.map((data, index) => (
             <div
               key={index}
-              className="bg-slate-100 my-3 p-3 rounded-lg flex flex-col gap-4 w-[99%] m-auto border-2 shadow-lg shadow-slate-300"
+              className="bg-slate-100 my-3 p-3 rounded-lg flex flex-col gap-4 w-[99%] m-auto border-2 shadow-lg shadow-slate-300 animate__animated animate__bounceIn"
             >
               <div className="flex flex-col">
                 <p className="font-semibold text-lg">{data.name}</p>
