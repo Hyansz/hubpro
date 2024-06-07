@@ -1,9 +1,9 @@
-require('dotenv').config({path: '.env.dev.local'});
+require('dotenv').config({path: '.env.development.local'});
 
 const {sql} = require('@vercel/postgres');
 
 async function execute() {
-    // const deleteTable = await sql`DROP TABLE komentar`;
+    const deleteTable = await sql`DROP TABLE komentar`;
 
     const createTable = await sql `
         CREATE TABLE IF NOT EXISTS komentar (
