@@ -132,7 +132,7 @@ export default function Home() {
               />
               <input
                 type="text"
-                placeholder="Website"
+                placeholder="Website Profile"
                 value={website}
                 onChange={(e) => setWebsite(e.target.value)}
                 className="border border-gray-300 rounded-lg px-3 py-2 mb-3 w-full"
