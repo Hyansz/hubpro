@@ -90,6 +90,10 @@ export default function Home() {
             />
           </div>
         </div>
+        <div className="mt-6">
+          <span>Profile pembuat: </span>
+          <Link href={'https://www.linkedin.com/in/reraihan/'} target="blank">https://www.linkedin.com/in/reraihan/</Link>
+        </div>
       </div>
       <p className="my-3">Komentar</p>
       {showData.length === 0 && <p>Belum ada komentar</p>}
