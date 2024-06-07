@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -64,18 +65,35 @@ export default function Home() {
   
 
   return (
-    <div className="w-11/12 m-auto my-10 p-4 rounded-lg border-2 border-black">
+    <div className="w-11/12 m-auto my-10 p-4 rounded-lg border-2 border-black shadow-2xl shadow-slate-700">
       <div className="flex items-center justify-between">
         <h1 className="p-3 font-bold text-xl">HubPro</h1>
         <h1 className="p-3 font-serif">Versi 0.0.1</h1>
       </div>
       <div className="mt-4 mb-8">
-        <p className="indent-5 text-justify">
-          Hai, HubProvers! Saya Raihan Regita Harjuno sebagai Founder HubPro, Kami ingin menyampaikan penghargaan kami atas kepercayaan Anda sebagai pengguna setia HubPro. Kami sadar bahwa Anda memiliki pilihan, dan kami berjanji untuk terus memberikan layanan terbaik yang kami bisa. Bagian penting dari misi kami adalah mendengarkan dengan cermat kebutuhan, keinginan, dan pengalaman Anda sebagai pengguna. Oleh karena itu, kami ingin mengajak Anda untuk berpartisipasi dalam memberikan feedback tentang pengalaman Anda menggunakan HubPro. Apakah ada momen tertentu yang membuat Anda merasa senang, frustrasi, atau bahkan terkesan? Apakah ada fitur yang menurut Anda sangat berguna atau mungkin kurang efektif? Apakah Anda memiliki ide kreatif atau perbaikan yang dapat membantu kami meningkatkan pengalaman pengguna? Kami sangat menghargai setiap pendapat Anda, dan kami berjanji untuk menggunakan feedback Anda untuk terus menyempurnakan HubPro. Mari bersama-sama menciptakan komunitas yang lebih baik dan memastikan bahwa setiap pengguna HubPro merasa dihargai dan didengar. Terima kasih atas dedikasi dan kontribusi Anda dalam membangun HubPro yang lebih baik untuk kita semua.
+        <p className="indent-5 text-justify mb-5">
+          Hai, HubProvers! Saya <span className="font-semibold">Raihan Regita Harjuno</span> sebagai <span className="font-semibold">Founder HubPro</span>, Kami ingin menyampaikan penghargaan kami atas kepercayaan Anda sebagai pengguna setia HubPro. Kami sadar bahwa Anda memiliki pilihan, dan kami berjanji untuk terus memberikan layanan terbaik yang kami bisa. Bagian penting dari misi kami adalah mendengarkan dengan cermat kebutuhan, keinginan, dan pengalaman Anda sebagai pengguna. Oleh karena itu, kami ingin mengajak Anda untuk berpartisipasi dalam memberikan feedback tentang pengalaman Anda menggunakan HubPro. Apakah ada momen tertentu yang membuat Anda merasa senang, frustrasi, atau bahkan terkesan? Apakah ada fitur yang menurut Anda sangat berguna atau mungkin kurang efektif? Apakah Anda memiliki ide kreatif atau perbaikan yang dapat membantu kami meningkatkan pengalaman pengguna? Kami sangat menghargai setiap pendapat Anda, dan kami berjanji untuk menggunakan feedback Anda untuk terus menyempurnakan HubPro. Mari bersama-sama menciptakan komunitas yang lebih baik dan memastikan bahwa setiap pengguna HubPro merasa dihargai dan didengar. Terima kasih atas dedikasi dan kontribusi Anda dalam membangun HubPro yang lebih baik untuk kita semua.
         </p>
+        <div className="indent-5">
+          <p className="mb-5">HubPro dapat digunakan di semua device, mulai dari mobile hingga laptop.</p>
+          <div className="flex flex-col lg:flex-row justify-center lg:gap-4">
+            <Image
+              src="/laptop.png"
+              width={700}
+              height={300}
+              alt="Picture of the author"
+            />
+            <Image
+              src="/mobile-device.png"
+              width={200}
+              height={200}
+              alt="Picture of the author"
+            />
+          </div>
+        </div>
       </div>
-      {showData.length === 0 && <p>Belum ada komentar</p>}
       <p className="my-3">Komentar</p>
+      {showData.length === 0 && <p>Belum ada komentar</p>}
       {showData.length > 0 && (
         <div className="max-h-96 overflow-y-auto">
           {showData.map((data, index) => (
@@ -97,7 +115,7 @@ export default function Home() {
       <div className="mt-5">
         <button
           onClick={() => setShowModal(true)}
-          className="border-2 border-black px-4 py-3 rounded-full w-full"
+          className="border-2 border-black px-4 py-3 rounded-full w-full font-semibold"
         >
           Tambahkan Komentar
         </button>
