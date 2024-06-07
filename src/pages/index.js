@@ -75,10 +75,11 @@ export default function Home() {
         </p>
         <div className="indent-5">
           <p className="mb-5">HubPro dapat digunakan di semua device, mulai dari mobile hingga laptop.</p>
-          <div className="flex flex-col lg:flex-row justify-center lg:gap-4">
+          <div className="flex flex-col items-center lg:flex-row justify-center lg:gap-4">
             <Image
               src="/laptop.png"
-              width={700}
+              className="order-1"
+              width={600}
               height={300}
               alt="Picture of the author"
             />
