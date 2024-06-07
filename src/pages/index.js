@@ -1,10 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
 export default function Home() {
-  const router = useRouter();
   const [showData, setShowData] = useState([]);
   const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState("");
@@ -99,7 +97,7 @@ export default function Home() {
           {showData.map((data, index) => (
             <div
               key={index}
-              className="bg-slate-100 my-3 p-3 rounded-lg flex flex-col gap-4 w-[99%] m-auto"
+              className="bg-slate-100 my-3 p-3 rounded-lg flex flex-col gap-4 w-[99%] m-auto border-2 shadow-lg shadow-slate-300"
             >
               <div className="flex flex-col">
                 <p className="font-semibold text-lg">{data.name}</p>
@@ -107,7 +105,7 @@ export default function Home() {
                   {data.website}
                 </Link>
               </div>
-              <p>{data.komentar}</p>
+              <p className="text-slate-700">{data.komentar}</p>
             </div>
           )).reverse()} {/* Reverse data untuk menampilkan komentar terbaru di atas */}
         </div>
