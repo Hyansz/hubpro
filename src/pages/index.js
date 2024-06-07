@@ -70,12 +70,12 @@ export default function Home() {
         <h1 className="p-3 font-serif">Versi 0.0.1</h1>
       </div>
       <div className="mt-4 mb-8">
-        <p>
-          Kalimat disini
+        <p className=" indent-5">
+          Hai, HubProvers! Saya Raihan Regita Harjuno sebagai Founder HubPro, Kami ingin menyampaikan penghargaan kami atas kepercayaan Anda sebagai pengguna setia HubPro. Kami sadar bahwa Anda memiliki pilihan, dan kami berjanji untuk terus memberikan layanan terbaik yang kami bisa. Bagian penting dari misi kami adalah mendengarkan dengan cermat kebutuhan, keinginan, dan pengalaman Anda sebagai pengguna. Oleh karena itu, kami ingin mengajak Anda untuk berpartisipasi dalam memberikan feedback tentang pengalaman Anda menggunakan HubPro. Apakah ada momen tertentu yang membuat Anda merasa senang, frustrasi, atau bahkan terkesan? Apakah ada fitur yang menurut Anda sangat berguna atau mungkin kurang efektif? Apakah Anda memiliki ide kreatif atau perbaikan yang dapat membantu kami meningkatkan pengalaman pengguna? Kami sangat menghargai setiap pendapat Anda, dan kami berjanji untuk menggunakan feedback Anda untuk terus menyempurnakan HubPro. Mari bersama-sama menciptakan komunitas yang lebih baik dan memastikan bahwa setiap pengguna HubPro merasa dihargai dan didengar. Terima kasih atas dedikasi dan kontribusi Anda dalam membangun HubPro yang lebih baik untuk kita semua.
         </p>
       </div>
       {showData.length === 0 && <p>Belum ada komentar</p>}
-      <p className="mt-2 mb-1">Komentar</p>
+      <p className="my-3">Komentar</p>
       {showData.length > 0 && (
         <div className="max-h-96 overflow-y-auto">
           {showData.map((data, index) => (
